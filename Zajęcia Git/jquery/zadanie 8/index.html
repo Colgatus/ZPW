@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Gier Komputerowych</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $("#ukryj").click(function(){
+                $("#tekst").hide()
+            })
+
+            $("#schowajKota").click(function(){
+                $("#kot").hide(20000)
+            })
+
+            $("#pokaz").click(function(){
+                $("#sekret").show()
+            })
+
+            $("#zapiszSie").click(function(){
+                $("#komunikat").show(1000)
+            })
+
+            $("#przelacz").click(function(){
+                $("#opis").toggle()
+            })
+
+            $("#questionMark").click(function(){
+                $("#passwordTip").toggle()
+            })
+
+            $("#button1").click(function(){
+                $("#slideUp").slideUp();
+            })
+
+            $("#button2").click(function(){
+                $("#slideDown").slideUp();
+            })
+
+            $("#button3").click(function(){
+                $("#bothWays").slideToggle();
+            })
+
+            // można użyć w slide...() wartości liczbowej i "fast" 200ms lub "slow" 600ms
+        })
+
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <p id="tekst">kliknij a zniknę</p>
+    <button id="ukryj">ukryj</button>
+
+    <img src="kot.jpg" id="kot">
+    <button id="schowajKota">schowaj kota</button>
+
+    <p id="sekret" style="display: none">Tajna wiadomość!</p>
+    <button id="pokaz">pokaż</button>
+
+    <p id="komunikat" style="display: none">Dziękujemy za zapisanie się!</p>
+    <button id="zapiszSie">zapisz się</button>
+
+    <p id="opis">Opis produktu</p>
+    <button id="przelacz">pokaż/ukryj opis</button>
+
+    <input type="password" name="" id="passwordInput"> <p style="display: none" id="passwordTip" >hasło musi mieć min 8 znaków</p>
+    <button id="questionMark">?</button>
+
+    <p id="slideUp">w górę</p>
+    <p id="slideDown">w dół</p>
+    <p id="bothWays">w obie</p>
+
+    <button id="button1">1</button>
+    <button id="button2">2</button>
+    <button id="button3">3</button>
+</body>
